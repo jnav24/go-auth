@@ -6,3 +6,4 @@ This is a basic Auth using the following
 - MySQL
 - Fiber
 - JWT
+- GORM
