@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	_, err := gorm.Open(mysql.Open(""), &gorm.Config({}}))
+	// change username, password, and db credentials
+	_, err := gorm.Open(mysql.Open("username:password@/database"), &gorm.Config({}}))
 
 	if err != nil {
 		panic("could not connect to the database")
