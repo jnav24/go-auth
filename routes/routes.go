@@ -1,9 +1,10 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"../controllers"
+	"github.com/gofiber/fiber/v2"
+)
 
 func Setup(app *Fiber.App) {
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
+	app.Get("/", controllers.Index)
 }
