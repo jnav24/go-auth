@@ -1,19 +1,12 @@
 package main
 
 import (
+	"./database"
 	"github.com/gofiber/fiber/v2"
-	"gorm.io/gorm"
-	"gorm.io/driver/mysql"
 )
 
 func main() {
-	// change username, password, and db credentials
-	_, err := gorm.Open(mysql.Open("username:password@/database"), &gorm.Config({}}))
-
-	if err != nil {
-		panic("could not connect to the database")
-	}
-
+	database.Connect()
 	app := fiber.New()
 
 	app.Get("/", func(c *fiber.Ctx) error {
